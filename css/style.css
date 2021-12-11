@@ -1,0 +1,140 @@
+:root {
+  --body-font: Verdana, sans-serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smallest-font-size: 0.625rem;
+
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fafafa;
+  color: #383838;
+}
+
+.forma {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  max-width: fit-content;
+  max-height: fit-content;
+  border: 0.125rem solid #80ccff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.0125rem 0.0625rem rgba(0, 0, 0, 0.031),
+    0 0.03125rem 0.125rem rgba(0, 0, 0, 0.044),
+    0 0.0625rem 0.25rem rgba(0, 0, 0, 0.056),
+    0 0.125rem 0.375rem rgba(0, 0, 0, 0.069),
+    0 0.375rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.validate {
+  padding: 0.5rem;
+  background-color: #fafafa;
+  border: 0.0625rem solid #bfbfbf;
+  border-radius: 0.25rem;
+  height: 2rem;
+  width: 12rem;
+}
+.validate::placeholder {
+  color: #999999;
+  font-family: Verdana, sans-serif;
+}
+
+.materialize-textarea {
+  padding: 0.5rem;
+  background-color: #fafafa;
+  border: 0.0625rem solid #bfbfbf;
+  border-radius: 0.25rem;
+  height: 5rem;
+  width: 12rem;
+}
+.materialize-textarea::placeholder {
+  color: #999999;
+  font-family: Verdana, sans-serif;
+}
+
+.g-recaptcha {
+  border: none;
+  border-radius: 0.25rem;
+  height: 2.75rem;
+  width: 12rem;
+  background-color: #0099ff;
+  font-family: Verdana, sans-serif;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: #fafafa;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+.g-recaptcha:hover {
+  background-color: #008ae6;
+}
+
+.validate,
+.materialize-textarea,
+.g-recaptcha {
+  display: block;
+  margin: 1rem;
+}
+
+.output_message {
+  height: 2rem;
+  color: #383838;
+  font-family: Verdana, sans-serif;
+  font-weight: 600;
+  font-size: var(--small-font-size);
+}
+
+.output_message.success {
+  display: block;
+  text-align: center;
+}
+
+.output_message.success:before {
+  content: "\f14a";
+  color: #383838;
+}
+
+.output_message.error {
+  background-color: #a6a6a6;
+}
+
+.output_message.error:before {
+  content: "\f071";
+}
