@@ -22,7 +22,7 @@ function submitForm(){
 }
 
 
-// MAXLENGTH
+// MAX-LENGTH
 function isNotMax(e){
     e = e || window.event;
     var target = e.target || e.srcElement;
