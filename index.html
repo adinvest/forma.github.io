@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма обратной связи</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="forma">
+      <form
+        id="messageForm"
+        class="contactform"
+        method="post"
+        action="/php/process.php"
+        onsubmit="submitForm(); return false;"
+      >
+        <input
+          id="name"
+          name="name"
+          type="text"
+          class="validate"
+          placeholder="Ваше имя"
+          maxlength="40"
+          required
+        />
+        <input
+          id="email"
+          type="email"
+          name="email"
+          class="validate"
+          placeholder="Эл. почта"
+          maxlength="40"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          class="materialize-textarea"
+          placeholder="Сообщение"
+          maxlength="500"
+          onkeypress="return isNotMax(event)"
+          required
+        ></textarea>
+        <button
+          id="formbtn"
+          class="g-recaptcha"
+          type="submit"
+          data-sitekey="6LdKkIIdAAAAAHtxn9-kgvr1ULSNmsXeyodPmiJ3"
+          data-callback="onSubmitReCaptcha"
+          data-theme="dark"
+        >
+          ОТПРАВИТЬ
+        </button>
+        <span id="status_message" class="output_message"></span>
+      </form>
+    </div>
+
+    <script src="js/custom.js"></script>
+  </body>
+</html>
