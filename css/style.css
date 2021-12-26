@@ -54,6 +54,7 @@ body {
   padding: 0.5rem;
   max-width: fit-content;
   max-height: fit-content;
+  outline: none;
   border: 0.125rem solid #80ccff;
   border-radius: 0.25rem;
   box-shadow: 0 0.0125rem 0.0625rem rgba(0, 0, 0, 0.031),
